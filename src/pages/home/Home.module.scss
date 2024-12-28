@@ -59,6 +59,81 @@
 			}
 		}
 	}
+
+	&Swiper {
+		width: 1360px;
+		margin: auto;
+		padding-bottom: 40px !important;
+
+		& .card {
+			width: 100%;
+			position: relative;
+
+			& .new {
+				position: absolute;
+				left: 15px;
+				top: 15px;
+				border-radius: 50%;
+				background-color: rgba(36, 36, 36, .4);
+				color: #fff;
+				width: 54px;
+				height: 54px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				& > span {
+					font-size: 13.5px;
+					font-family: "secondary";
+					text-transform: uppercase;
+					height: 11px;
+				}
+			}
+
+			& .favorite {
+				position: absolute;
+				right: 15px;
+				top: 15px;
+				border-radius: 50%;
+				background-color: #292526;
+				width: 54px;
+				height: 54px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				& > img {
+					display: block;
+					width: 35px;
+					height: 34px;
+				}
+			}
+
+			&Img {
+				width: 100%;
+				height: auto;
+			}
+
+			&Brand {
+				margin-top: 20px;
+				font-size: 30px;
+				font-weight: 500;
+			}
+
+			&Title {
+				margin-top: 1px;
+				font-size: 23px;
+				font-weight: 500;
+			}
+
+			&Price {
+				margin-top: 10px;
+				font-size: 23px;
+				font-weight: 500;
+				display: block;
+			}
+		}
+	}
 }
 
 .popular {

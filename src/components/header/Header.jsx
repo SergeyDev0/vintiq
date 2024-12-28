@@ -44,9 +44,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className={styles.headerLogo}>
+        <Link to="/" className={styles.headerLogo}>
           <img src={logo} alt="Logo" />
-        </div>
+        </Link>
         <nav className={styles.userNav}>
           <ul>
             <li>
