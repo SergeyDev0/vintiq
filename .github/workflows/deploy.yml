@@ -41,7 +41,7 @@ jobs:
             # Перемещение в директорию проекта
             cd /root/Vintiq_front/vintiq
             docker stop frontend-container
-            dcoekr rm frontend-container
+            docker rm frontend-container
             docker rmi frontend
             docker build -t frontend .
             docker run -d -p 5173:5173 --name frontend-container frontend
