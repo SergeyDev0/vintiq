@@ -10,6 +10,10 @@ class headerModalStore {
 	setModal(bool) {
 		this.modal = bool;
 	}
+
+	toggleModal() {
+		this.modal = !this.modal;
+	}
 }
 
 export default new headerModalStore();

@@ -73,15 +73,19 @@ const Header = () => {
         <>
         	<div className={styles.headerBottom}>
 	          <ul>
-	            <li>
-	              <Link 
-									to="/"
-									onMouseEnter={() => {
-										setModal(true);
-										headerModalStore.setModal(true);
-									}}
-									className={modal ? `${styles.active}` : null}
-								>О нас</Link>
+	            <li
+								className={modal ? `${styles.active}` : null}
+								onClick={() => {
+									setModal(!modal);
+									headerModalStore.toggleModal();
+         
+								}}
+								onMouseEnter={() => {
+									setModal(true);
+									headerModalStore.setModal(true);
+								}}
+							>
+	              О нас
 	            </li>
 	            <li>
 	              <Link to="/">Новинки</Link>

@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   padding: 60px 100px 0 100px;
-	background-color: #fff;
+  background-color: #fff;
 
   &Top {
     position: relative;
@@ -25,43 +25,42 @@
       gap: 40px;
 
       & > li {
-        & a {
-          font-size: 24px;
-          font-weight: 400;
-          padding: 1px 10px;
+				cursor: pointer;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 1px 10px;
+        transition: 0.2s;
+        position: relative;
+        border-radius: 5px;
+
+        &:not(.active):hover::after {
+          background-color: #000;
+          width: calc(100% - 20px);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          height: 2px;
+          top: calc(100% + 4px);
           transition: 0.2s;
-          position: relative;
-					border-radius: 5px;
+        }
+
+        &.active {
+          background-color: #000;
+          color: #fff;
+        }
+
+        &.sale {
+          color: #f31010;
 
           &:not(.active):hover::after {
-            background-color: #000;
+            background-color: #f31010;
             width: calc(100% - 20px);
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 0%;
-            height: 2px;
-            top: calc(100% + 4px);
-            transition: 0.2s;
-          }
-
-					&.active {
-            background-color: #000;
-            color: #fff;
-          }
-
-          &.sale {
-            color: #f31010;
-
-            &:not(.active):hover::after {
-              background-color: #f31010;
-              width: calc(100% - 20px);
-            }
           }
         }
       }
@@ -81,7 +80,7 @@
           padding: 1px 10px;
           transition: 0.2s;
           position: relative;
-					border-radius: 5px;
+          border-radius: 5px;
 
           &:not(.active):hover::after {
             background-color: #000;
@@ -131,7 +130,7 @@
     & > input {
       height: 38px;
       padding-left: 50px;
-			padding-right: 20px;
+      padding-right: 20px;
       border: 1px solid black;
       border-radius: 5px;
       width: 100%;
@@ -168,27 +167,27 @@
 }
 
 .modal {
-	padding: 40px 0;
-	z-index: 3;
+  padding: 40px 0;
+  z-index: 3;
 
-	&LinkList {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
+  &LinkList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-	&LinkItem {
-		font-size: 24px;
-	}
+  &LinkItem {
+    font-size: 24px;
+  }
 
-	&::before {
-		content: "";
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.78);
-		z-index: -1;
-	}
+  &::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    z-index: -1;
+  }
 }
