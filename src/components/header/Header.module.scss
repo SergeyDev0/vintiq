@@ -1,7 +1,7 @@
 .header {
   width: 100%;
-  margin-top: 60px;
-  padding: 0 100px;
+  padding: 60px 100px 0 100px;
+	background-color: #fff;
 
   &Top {
     position: relative;
@@ -31,6 +31,7 @@
           padding: 1px 10px;
           transition: 0.2s;
           position: relative;
+					border-radius: 5px;
 
           &:not(.active):hover::after {
             background-color: #000;
@@ -43,10 +44,15 @@
             left: 0;
             right: 0;
             margin: auto;
-            width: 0;
+            width: 0%;
             height: 2px;
             top: calc(100% + 4px);
-            transition: 0.2s width;
+            transition: 0.2s;
+          }
+
+					&.active {
+            background-color: #000;
+            color: #fff;
           }
 
           &.sale {
@@ -75,6 +81,7 @@
           padding: 1px 10px;
           transition: 0.2s;
           position: relative;
+					border-radius: 5px;
 
           &:not(.active):hover::after {
             background-color: #000;
@@ -87,14 +94,13 @@
             left: 0;
             right: 0;
             margin: auto;
-            width: 0;
+            width: 0%;
             height: 2px;
             top: calc(100% + 4px);
-            transition: 0.2s width;
+            transition: 0.2s;
           }
 
           &.active {
-            border-radius: 5px;
             background-color: #000;
             color: #fff;
           }
@@ -159,4 +165,30 @@
     align-items: center;
     gap: 30px;
   }
+}
+
+.modal {
+	padding: 40px 0;
+	z-index: 3;
+
+	&LinkList {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&LinkItem {
+		font-size: 24px;
+	}
+
+	&::before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.78);
+		z-index: -1;
+	}
 }
