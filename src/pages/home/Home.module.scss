@@ -81,6 +81,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				border: 1px solid #fff;
 				
 				& > span {
 					font-size: 13.5px;
@@ -102,7 +103,7 @@
 				justify-content: center;
 				align-items: center;
 
-				& > img {
+				& > svg {
 					display: block;
 					width: 35px;
 					height: 34px;
@@ -199,6 +200,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				border: 1px solid #fff;
 				
 				& > span {
 					font-size: 13.5px;
@@ -214,16 +216,16 @@
 				top: 15px;
 				border-radius: 50%;
 				background-color: #292526;
-				width: 35px;
-				height: 35px;
+				width: 54px;
+				height: 54px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 
-				& > img {
+				& > svg {
 					display: block;
-					width: 21px;
-					height: 20px;
+					width: 35px;
+					height: 34px;
 				}
 			}
 
