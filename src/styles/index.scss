@@ -17,9 +17,19 @@ a {
 .swiper-button-next {
 	top: auto !important;
 	bottom: 0 !important;
+
+	&::after {
+		font-size: 30px !important;
+		color: #949494;
+	}
 }
 
 .swiper-button-prev {
 	top: auto !important;
 	bottom: 0 !important;
+	
+	&::after {
+		font-size: 30px !important;
+		color: #949494;
+	}
 }
